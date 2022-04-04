@@ -1,0 +1,25 @@
+{
+  "name": "vote-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "npx prisma migrate dev --name init && npx prisma db seed && node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^3.11.1",
+    "axios": "^0.26.1",
+    "express": "^4.17.3",
+    "geoip-lite": "^1.4.4",
+    "prisma": "^3.11.1"
+  },
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
+  "nodemonConfig": {
+    "ext": "js,html"
+  }
+}
